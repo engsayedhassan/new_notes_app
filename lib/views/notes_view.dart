@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_notes_app/widgets/notes_view_body.dart';
-import 'package:new_notes_app/widgets/add_note_bottom_sheet.dart';
-import 'package:new_notes_app/widgets/constant_key.dart';
+import 'package:new_notes_app/views/widgets/notes_view_body.dart';
+import 'package:new_notes_app/views/widgets/add_note_bottom_sheet.dart';
+import 'package:new_notes_app/views/widgets/constant_key.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -10,7 +10,7 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: colorPrimaryKey,
+        backgroundColor: kPrimaryColor,
         child: Icon(
           Icons.add,
           size: 24,

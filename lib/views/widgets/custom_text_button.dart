@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_notes_app/widgets/constant_key.dart';
+import 'package:new_notes_app/views/widgets/constant_key.dart';
 
 class CustomTextButton extends StatelessWidget {
   final String text;
@@ -14,7 +14,7 @@ class CustomTextButton extends StatelessWidget {
         height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: colorPrimaryKey,
+          color: kPrimaryColor,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Center(
