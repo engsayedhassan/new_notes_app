@@ -4,7 +4,13 @@ import 'package:new_notes_app/views/widgets/constant_key.dart';
 class CustomTextButton extends StatelessWidget {
   final String text;
   final VoidCallback? onTap;
-  const CustomTextButton({super.key,this.onTap, required this.text});
+  final bool isLoading;
+  const CustomTextButton({
+    super.key,
+    this.onTap,
+    required this.text,
+    this.isLoading = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,13 +24,22 @@ class CustomTextButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: Center(
-          child: Text(
-            text,
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.white,
-            ),
-          ),
+          child: isLoading
+              ? SizedBox(
+                  width: 28,
+                height: 28,
+                  child: CircularProgressIndicator(
+                    color: Colors.white,
+                  ),
+                )
+              : Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
         ),
       ),
     );

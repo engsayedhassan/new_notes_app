@@ -7,7 +7,7 @@ class NotesView extends StatelessWidget {
   const NotesView({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: kPrimaryColor,
@@ -18,7 +18,11 @@ class NotesView extends StatelessWidget {
         ),
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
               context: context,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16)
+              ),
               builder: (context) {
                 return AddNoteBottomSheet();
               });
